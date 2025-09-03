@@ -1,14 +1,14 @@
 [
   {
-    "title": "Business Growth Strategy",
-    "category": "strategy",
-    "tags": ["Strategy", "Consulting"],
+    "title": "High-quality water hose",
+    "category": "hose",
+    "tags": ["hose"],
     "img": "assets/img/portfolio/prodect1.jpg"
   },
   {
-    "title": "Financial Restructuring",
-    "category": "finance",
-    "tags": ["Finance", "Investment"],
+    "title": "High-quality Cable Protection Hose",
+    "category": "hose",
+    "tags": ["hose"],
     "img": "assets/img/portfolio/prodect2.jpg"
   },
   {
@@ -18,9 +18,9 @@
     "img": "assets/img/portfolio/portfolio-3.webp"
   },
   {
-    "title": "Digital Transformation",
-    "category": "technology",
-    "tags": ["Technology", "Innovation"],
+    "title": "High-quality Cable Protection Hose",
+    "category": "hose",
+    "tags": ["hose"],
     "img": "assets/img/portfolio/prodect3.jpg"
   }
 ]
