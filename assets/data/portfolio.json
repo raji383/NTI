@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Business Growth Strategy",
+    "category": "strategy",
+    "tags": ["Strategy", "Consulting"],
+    "img": "assets/img/portfolio/prodect1.jpg"
+  },
+  {
+    "title": "Financial Restructuring",
+    "category": "finance",
+    "tags": ["Finance", "Investment"],
+    "img": "assets/img/portfolio/prodect2.jpg"
+  },
+  {
+    "title": "Supply Chain Optimization",
+    "category": "operations",
+    "tags": ["Operations", "Logistics"],
+    "img": "assets/img/portfolio/portfolio-3.webp"
+  },
+  {
+    "title": "Digital Transformation",
+    "category": "technology",
+    "tags": ["Technology", "Innovation"],
+    "img": "assets/img/portfolio/prodect3.jpg"
+  }
+]
