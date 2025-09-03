@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - NOVA TECH INDUSTRIES</title>
+  <link href="assets/img/nti.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Poppins', 'Roboto', sans-serif;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 2.5rem 2rem 2rem 2rem;
+    }
+
+    .login-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0d6efd;
+      text-align: center;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .login-logo {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 80px;
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #888;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="assets/img/nti.png" alt="NOVA TECH INDUSTRIES" class="login-logo">
+    <div class="login-title">Login</div>
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+    <div class="login-footer">
+      &copy; 2025 NOVA TECH INDUSTRIES
+    </div>
+  </div>
+
+  <script>
+  
+    const accounts = [
+      { email: "ibtsam@gmail.com", password: "Ibtsam" },
+      { email: "admin@gmail.com", password: "Admin2025" }
+    ];
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      const user = accounts.find(acc => acc.email === email && acc.password === password);
+
+      if (user) {
+        window.location.href = 'add-product.html';
+      } else {
+        alert('Invalid email or password!');
+      }
+    });
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
