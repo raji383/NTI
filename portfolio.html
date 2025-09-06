@@ -106,7 +106,7 @@
 
   <!-- Script to add portfolio items dynamically -->
   <script>
-    fetch('assets/data/portfolio.json')
+    fetch('/api/portfolio')
       .then(response => response.json())
       .then(portfolioData => {
         const container = document.getElementById("portfolio-items");
@@ -114,20 +114,25 @@
           const div = document.createElement("div");
           div.className = `col-lg-4 col-md-6 portfolio-item isotope-item ${item.category}`;
           div.innerHTML = `
-        <div class="portfolio-card">
-          <div class="portfolio-img">
-            <img src="${item.img}" alt="${item.title}" class="img-fluid">
-            <div class="portfolio-overlay">
-              <a href="${item.img}" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
-              <a href="#" class="portfolio-details-link"><i class="bi bi-link"></i></a>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h4>${item.title}</h4>
-            <p>${item.tags.join(", ")}</p>
-          </div>
-        </div>
-      `;
+  <div class="portfolio-card">
+    <div class="portfolio-img">
+      <img src="${item.img}" alt="${item.title}" class="img-fluid">
+      <div class="portfolio-overlay">
+        <a href="${item.img}" class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+        <a href="https://wa.me/212612345678?text=السلام عليكم، مهتم بالمنتج ${encodeURIComponent(item.title)}" 
+           target="_blank" 
+           class="portfolio-details-link">
+           <i class="bi bi-link"></i>
+        </a>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>${item.title}</h4>
+      <p>$${item.prix ? item.prix.toFixed(2) : (item.prx || item.tags || []).join(", ")}</p>
+    </div>
+  </div>
+`;
+
           container.appendChild(div);
         });
       })

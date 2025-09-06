@@ -15,10 +15,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    body {
-      background: #f8f9fa;
-      font-family: 'Poppins', 'Roboto', sans-serif;
-    }
+  
 
     .login-container {
       max-width: 400px;
@@ -27,6 +24,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       padding: 2.5rem 2rem 2rem 2rem;
+      color: black;
     }
 
     .login-title {
@@ -61,6 +59,8 @@
       font-size: 0.95rem;
     }
   </style>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -84,7 +84,7 @@
   </div>
 
   <script>
-  
+
     const accounts = [
       { email: "ibtsam@gmail.com", password: "Ibtsam" },
       { email: "admin@gmail.com", password: "Admin2025" }
@@ -98,7 +98,7 @@
       const user = accounts.find(acc => acc.email === email && acc.password === password);
 
       if (user) {
-        window.location.href = 'add-product.html';
+        window.location.href = 'add-portfolio.html';
       } else {
         alert('Invalid email or password!');
       }
